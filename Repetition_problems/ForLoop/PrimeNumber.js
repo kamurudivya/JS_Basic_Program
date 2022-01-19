@@ -1,19 +1,14 @@
 /*
-* Take range number of input and output the prime numbers in that range 
+* Take user input and check number is prime or not 
 */
 const prompts = require("prompt-sync")();
-var start = parseInt(prompts("Enter starting number of range : "));
-var end = parseInt(prompts("Enter final number of range : "));
-var isPrime;
-for (i = start; i <= end; i++) {
-    isPrime = true;
-    for (j = 2; j < i; j++) {
-        if (i % j == 0) {
-            isPrime = false;
-            break;
-        }
-    }
-    if (isPrime) {
-        console.log(i);
-    }
+const num = prompts("Enter a number to check prime or non-prime : ")
+var isPrime = true;
+for (i = 2; i < num; i++) {
+    if (num % i == 0)
+        isPrime = false;
 }
+if (isPrime)
+    console.log(num + " is a prime number");
+else
+    console.log(num + " is not a prime number");

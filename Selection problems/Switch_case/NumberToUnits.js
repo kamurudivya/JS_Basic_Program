@@ -1,28 +1,28 @@
 /*
-* Number to word 
+* Number to display unit 
 */
 const prompts = require("prompt-sync")();
-var number = prompts("Enter a single digit number : ")
-switch (parseInt(number)) {
-    case 1: console.log("One");
+var num = prompts("Enter a number : ")
+switch (parseInt(num)) {
+    case 1: console.log("Unit");
         break;
-    case 2: console.log("Two");
+    case 10: console.log("Ten");
         break;
-    case 3: console.log("Three");
+    case 100: console.log("Hundred");
         break;
-    case 4: console.log("Four");
+    case 1000: console.log("Thousand");
         break;
-    case 5: console.log("Five");
+    case 10000: console.log("Ten Thousand");
         break;
-    case 6: console.log("Six");
+    case 100000: console.log("Hundred Thousand");
         break;
-    case 7: console.log("Seven");
+    case 1000000: console.log("One Million");
         break;
-    case 8: console.log("Eight");
+    case 10000000: console.log("Ten Million");
         break;
-    case 9: console.log("Nine");
+    case 100000000: console.log("Hundred Million");
         break;
-    case 0: console.log("Zero");
+    case 1000000000: console.log("One Billion");
         break;
-    default: console.log("Enter a number between 0-9");
+    default: console.log("Enter a valid number");
 }
